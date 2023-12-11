@@ -1,0 +1,31 @@
+{%extends "base.html" %}
+
+{% block start %}
+
+    
+    <section>
+      <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col-xl-10  mx-auto">           
+              <img class="img-fluid mb-5" style="height: 100px; " src="/media/{{blog_obj.image}}" alt="">
+            </div>
+          </div>
+
+        <div class="row">
+          <div class="col-xl-8 col-lg-10 mx-auto">           
+            <p class="py-3 mb-5 text-muted text-center font-weight-light"><a href="#"><img class="avatar mr-2" src="" alt=""></a> Written by <a class="font-weight-bold" href="#">{{user.username}}</a><span class="mx-1">|</span>{{blog_obj.created_at}} <a class="font-weight-bold" href="blog.html">Living</a><span class="mx-1">|</span><a class="text-muted" href="#">2 comments                </a></p>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-10 mx-auto"><img class="img-fluid mb-5" src="../../../d19m59y37dris4.cloudfront.net/directory/1-6-1/img/photo/photo-1471189641895-16c58a695bcb.jpg" alt=""></div>
+        </div>
+        <div class="row">
+          <div class="col-xl-8 col-lg-10  mx-auto">                               
+            <div class="text-content mt-5  mb-5" >
+               {{blog_obj.content|safe}}
+            </div>
+         </div>
+         </div>
+        </section>
+{% endblock %}
